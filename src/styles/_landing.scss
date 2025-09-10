@@ -1,0 +1,229 @@
+.flexSenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.videoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // keep subtitle left under video
+  margin: 2rem auto;
+  width: fit-content;
+
+  &.centered {
+    width: 100%;
+    text-align: left;
+  }
+
+  &.halfScreen {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  iframe,
+  video {
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .videoSubtitle {
+    margin-top: 0.7rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #5a7ca0;
+    text-align: left;
+    top: 305%;
+  right: 65%;
+  position: absolute;
+  }
+}
+
+.landingPage {
+  width: 100%;
+  align-items: center;
+  height:100vh;
+
+  .mainContainer {
+    .about-list {
+      ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 2rem;
+
+        .about {
+          color: green;
+        }
+      }
+    }
+
+    .noahImg {
+      height: 500px;
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .liveContainer {
+    width: 50%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #4a6fa5;
+    text-align: left;
+
+    .firstParagraph {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .subParagraph {
+      font-style: italic;
+    }
+  }
+
+  .sectionTwo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .firstPhoto {
+      margin: 120px 0 100px;
+      width: 50%;
+      position: absolute;
+      left: 80px;
+
+      img {
+        height: 400px;
+        width: 80%;
+      }
+    }
+
+    .photoBackground {
+      width: 60%;
+      height: 500px;
+      margin: 60px 0 60px auto;
+      background: #d9eaf7 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  .sectionFour {
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+
+    .verticalCard {
+      display: flex;
+      flex-direction: column;
+      background: #d9eaf7;
+      height: 800px;
+      width: 60%;
+      gap: 3rem;
+
+      img {
+        width: 350px;
+      }
+    }
+
+    .singlePic {
+      margin: 100px 20px 100px 0;
+      position: absolute;
+      left: 50%;
+      width: 40%;
+
+      img {
+        width: 100%;
+        height: 500px;
+      }
+    }
+  }
+
+  .centeredCardWrapper {
+    display: flex;
+    justify-content: center;   // centers horizontally
+    margin: 5rem 0;            // controls vertical spacing
+    position: relative;        // if you still need relative positioning for inner elements
+  }
+  
+  .centeredCard {
+    background-color: #dde6dd;
+    width: 70%;
+    min-height: 44rem;          // maintain height
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    /* remove absolute and left */
+  }
+  
+  .centeredCard .img1 {
+    height: 22rem;
+    width: 22rem;
+    /* optional offset using margin */
+    margin-top: 12rem;
+    margin-left: -2rem;
+  }
+  
+  .centeredCard .img2 {
+    height: 32rem;
+    width: 32rem;
+    /* optional offset using margin */
+    margin-top: 6rem;
+    margin-right: -2rem;
+
+  }
+  
+
+  .sectionSix {
+    margin-top: 50rem;
+  }
+
+  .finalSection {
+    background: #4cc0ed;
+    width: 100%;
+    max-height: 600px; // ✅ controls height
+    display: flex;
+    flex-direction: row;
+    margin: 1rem auto;
+    // background: #e0f7ff; //
+    .imgWrapper{
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit:fill
+      }
+    }
+    .wishWrapper{
+      width: 50%;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .wishParagraph {
+      // margin-top: 6rem;
+      width: 50%;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 1rem;
+      font-style: oblique;
+      // color: aqua;
+      color: #fff
+    }
+  }
+  }
+
+
+}

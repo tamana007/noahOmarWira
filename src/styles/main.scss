@@ -1,0 +1,10 @@
+@import './header';
+@import './landing';
+@import './footer';
+@import './app';
+
+body {
+  background-color:#F0F4F8; // white background
+  margin: 0; // removes default browser spacing
+  font-family: Arial, sans-serif; // optional global font
+}
