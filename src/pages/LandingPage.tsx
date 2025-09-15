@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import TextSection from "../components/TextSection";
-import { paragraph } from "../data/paragraph.js"; // array of objects
-// import { section } from "../data/section";
+import { paragraph } from "../data/paragraph.js";
 import familySelfie from "../assets/familySelfie.jpeg";
 import smirkeyNoah from "../assets/smirkeyNoah.jpeg";
 import withMomandDad from "../assets/withMomandDad.jpeg";
@@ -11,9 +10,15 @@ import sevenMonths from "../assets/sevenMonths.jpeg";
 import staringAtCake from "../assets/staringAtCake.jpeg";
 import withMaman from "../assets/withMaman.jpeg";
 import withDady from "../assets/withDady.jpeg";
-import srawlerNoah from '../assets/srawlerNoah.jpeg'
+import srawlerNoah from "../assets/srawlerNoah.jpeg";
 
 function LandingPage() {
+  const [seeMore, setSeeMore] = useState(false);
+
+  const activeParagraph = () => {
+    setSeeMore(!seeMore);
+  };
+
   return (
     <div className="landingPage">
       <Header />
@@ -23,13 +28,11 @@ function LandingPage() {
       </div>
 
       {/* Render TextSection in order */}
-      
+
       <TextSection
         firstParagraph={paragraph[0].firstParagraph}
         subParagraph={paragraph[0].subParagraph}
       />
-      
-    
 
       {/* Example of sectionTwo */}
       <div className="sectionTwo">
@@ -73,23 +76,44 @@ function LandingPage() {
         <div className="singlePic">
           <img src={staringAtCake} alt="Staring at Cake" />
         </div>
-       </div>
-      <TextSection firstParagraph={paragraph[3].firstParagraph}
-      subParagraph={paragraph[3].subParagraph} /> 
+      </div>
+      <TextSection
+        firstParagraph={paragraph[3].firstParagraph}
+        subParagraph={paragraph[3].subParagraph}
+      />
 
       {/* Centered Card */}
-  <div className="centeredCardWrapper">
-  <div className="centeredCard">
-    <img className="img1" src={withMaman} />
-    <img className="img2" src={withDady} />
-  </div>
-</div>
+      <div className="centeredCardWrapper">
+        <div className="centeredCard">
+          <img className="img1" src={withMaman} />
+          <img className="img2" src={withDady} />
+        </div>
+      </div>
 
-  <div className="finalSection">
-    <div className="imgWrapper"><img src={srawlerNoah} alt="StrNoah" /></div>
-    <div className="wishWrapper"><p className="wishParagraph">We want our baby to never feel even the tiniest disappointment in his life, nor sense that anything is missing from his heart Our greatest hope is that he grows surrounded by love, guided by kindness, and blessed with opportunities that help him shine. His happiness and fulfillment will always be our greatest purpose..</p></div>
-  </div>
+      <div className="finalSection">
+        <div className="imgWrapper">
+          <img src={srawlerNoah} alt="StrNoah" />
+        </div>
+        <div className="wishWrapper">
+          <p className="wishParagraph">
+            We want our baby to never feel even the tiniest disappointment in
+            his life, nor sense that anything is missing from his heart Our
+            greatest hope is that he grows surrounded by love, guided by
+            kindness, and blessed with opportunities that help him shine. His
+            happiness and fulfillment will always be our greatest purpose..
+           {!seeMore&& <a onClick={activeParagraph}>seeMore</a>}
+            {seeMore && (
+  <>
+    <span className="wishParagraph">Every smile of his is a reminder of the miracle we hold in our arms, and every little step he takes is a step into a future we dream to make brighter for him. May his journey be filled with curiosity, courage, and endless love — and may we always be the safe place he returns to, no matter how far life carries him</span><br/>
+    <a className="seeMoreBtn" onClick={activeParagraph}>
+      See less
+    </a>
+  </>
+)}
 
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

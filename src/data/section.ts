@@ -23,7 +23,7 @@ export const section=[
       "When little Noah looks up at us with his wide, innocent eyes..."
   },
   {
-    videoUrl:youtube.com,
+    videoUrl:'youtube.com',
     firstParagraph: "Seven Months of Precious Memories",
     subParagraph:
       "A sweet day with love, laughter, and cake..."
