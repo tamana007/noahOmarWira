@@ -1,0 +1,80 @@
+.milestonePage{
+
+  .milestoneWrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: repeat(3, 350px);
+    gap: 10rem;
+    padding: 2rem;
+    // margin: 3rem 2rem 3rem 6rem;
+  
+    .singleWrapper {
+      display: flex;
+      flex-direction: column;
+      .cardWrapper {
+        height: 100%;
+        width: 28rem;
+        position: relative;
+        // background-color:#4A5D8C;
+        background: rgba(70, 130, 180, 0.5);
+        color: #333;
+        padding: 2rem;
+        .tag {
+          position: absolute;
+          right: 1rem;
+          top: 4rem;
+          width: 300px;
+          height: 330px;
+          font-weight: 300;
+     
+        background:rgb(245, 240, 230);
+  
+          // background: rgba(70, 130, 180, 0.5);
+          border-radius: 0.5rem;
+          height: 30px;
+          width: 95px;
+          padding: 0.3rem;
+        }
+      }
+      img {
+        width: 300px;
+        height: 350px;
+        // }
+        // }
+      }
+      .miniConsole {
+        color: #2f4f4f;
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: 0.08cm;
+        .miniText {
+          // color: #2F4F4;
+        }
+        .price {
+          color: #1a2e40;
+        }
+      }
+      .ideal {
+        text-align: left;
+        color: #555555;
+      }
+    }
+  }
+  .addMilestoneWrapper{
+    height: 100vh;
+    background-color: antiquewhite;
+    position: relative;
+    img{
+      height: 40rem;
+      width: 100%;
+    }
+    h1{
+      position: absolute;
+      bottom: 35rem;
+      left: 28rem;
+     color: rgba(70, 130, 180, 0.5);;
+      letter-spacing: 0.08rem;
+    }
+  }
+}

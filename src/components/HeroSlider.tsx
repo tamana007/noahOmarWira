@@ -20,11 +20,19 @@ function HeroSlider({ data }) {
 
   return (
     <div className="heroSlider">
-      <img
-        className="sliderImg"
-        src={data[currentIndex].img}
-        alt={`slide-${currentIndex}`}
-      />
+      <div className="sliderWrapper">
+        {data.map((item, idx) => (
+          <img
+            key={idx}
+            className={`sliderImg ${idx === currentIndex ? "active" : ""}`}
+            src={item.img}
+            alt={`slide-${idx}`}
+          />
+        ))}
+        <div className="sliderTextWrapper">
+          <p className="imgCaption">{data[currentIndex].firstParagraph}</p>
+        </div>
+      </div>
 
       <div className="controls">
         <button onClick={prevSlide}>⬅️</button>
