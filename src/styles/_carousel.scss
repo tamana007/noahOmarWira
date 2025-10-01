@@ -4,9 +4,48 @@
   width: 60%;
   text-align: left;
   margin: 2rem;
-  background: rgb(208, 132, 162);
+  // background: rgb(208, 132, 162);
   .mainCrousel{
+    position: relative;
     width: 100%;
     height: 400px;
+    img{
+      width: 100%;
+      height: 23rem;
+      border-radius: 1.5rem;
+    }
+    button{
+      position: absolute;
+      top: 8rem;
+     font-size: 2rem;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     backdrop-filter: blur(8px);  
+     background: rgba(255, 255, 255, 0.25);  
+     border: 1px solid rgba(255, 255, 255, 0.4);
+     color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     pointer-events: auto;
+     transition: background 0.3s ease, transform 0.2s ease;
+     visibility: hidden;
+    }
+    &:hover button {
+      opacity: 1;              /* show on hover of .mainCrousel */
+      visibility: visible;
+    }
+    button:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.1);
+    }
+    .nxt{
+      right: 2rem;
+    }
+    .prv{
+      left: 2rem;
+    }
   }
 }
