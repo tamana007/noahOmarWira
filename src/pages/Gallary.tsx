@@ -6,7 +6,7 @@ function Gallary() {
     <div className='gallaryPage'>
      
       <SectionOne/>
-      <div>section two</div>
+      {/* <div>section two</div> */}
     </div>
   )
 }

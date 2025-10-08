@@ -48,4 +48,42 @@
       left: 2rem;
     }
   }
+  .informationWrapper{
+    display: flex;
+    flex-direction: column;
+    .descriptionWrapper{
+      display: flex;
+      img{
+        width:4rem;
+        height: 6rem;
+      }
+      .paragraphWrapper{
+        padding-left: 1rem;
+        p{
+          color: rgb(126, 122, 122);
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+      }
+    }
+  }
+  .finalContainer{
+    background-color: #F3F8FC; // soft pastel blue
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    color: rgb(49, 145, 145);
+    text-align: left;
+    display: flex;
+    .emjContainer{
+     text-align: center;
+     align-items: center;
+  display: flex;
+    }
+  .textContainer{
+    text-align: left;
+    margin-left: 1rem;
+   
+  }
+   
+  }
 }

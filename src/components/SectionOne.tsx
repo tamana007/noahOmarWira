@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from './Carousel';
 import { gallaryItems } from '../data/gallary';
+import MilestoneEditor from './MilestoneEditor';
 
 
 function sectionOne() {
@@ -8,7 +9,7 @@ function sectionOne() {
     <div className='sectionOnePage'>
       <div className='sectionOneWrapper'>
         <Carousel gallaryItems={gallaryItems}/>
-        <div>right details</div>
+        <MilestoneEditor gallaryItems={gallaryItems}/>
       </div>
     </div>
   )
