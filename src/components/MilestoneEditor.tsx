@@ -26,7 +26,7 @@ function MilestoneEditor({ gallaryItems }) {
       >
         {/* <button>Edit {gallaryItems[current].alt}</button> */}
         <button>Edit Caption</button>
-        <input type="number" ></input>
+        {/* <input type="number" ></input> */}
         <input
           type="text"
           onChange={(e) => {
