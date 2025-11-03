@@ -16,8 +16,8 @@ function App() {
     <div className="appwrapper">
       
       {/* <LandingPage/> */}
-      {/* <Milestones/> */}
-      <Gallary/>
+      <Milestones/>
+      {/* <Gallary/> */}
       {/* <Footer/> */}
 
     </div>

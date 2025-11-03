@@ -4,11 +4,11 @@ import Milestone from './Milestone';
 
 function RestMilestones() {
   // const restList=useSelector((state)=>state.Milestone.Milestones)
-  const restList = useSelector((state) => state.milestone.milestones);
-  console.log('rwfskjfkd',restList);
+  const restList = useSelector((state) => state.milestones);
+  // console.log('rwfskjfkd',restList);
   
   useEffect(()=>{
-    console.log(restList,'rest list logged');
+    // console.log(restList,'rest list logged');
     
   },[])
   return (
