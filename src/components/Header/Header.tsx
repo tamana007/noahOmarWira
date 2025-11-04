@@ -1,14 +1,39 @@
 import React from 'react'
+// import Milestones from '../../pages/Milestones'
+import { NavLink } from 'react-router-dom'
 
 function Header() {
+
+  const leftNav = [
+    { label: "Baby Moments", path: "/" },
+    { label: "Milestones", path: "/milestones" },
+    // { label: "Gallary", path: "/memories" },
+    { label: "Treasures", path: "/gallary" },
+  ];
   return (
     <>
     <div className='nav-menu'>
     <div className='left-menu'>
     <ul>
-      <li>Baby Moments</li>
-      <li>Smiles</li>
-      <li>Memories</li>
+    {leftNav.map((nav)=>(<li>
+      <NavLink key={nav.path} className={({ isActive }) => isActive ? "active" : "navlink"} to={nav.path}>{nav.label}</NavLink>
+    </li>))}
+      {/* <li>
+        <NavLink to="/milestones">
+        Baby Moments
+        </NavLink>
+        </li>
+      <li>
+        <NavLink to="/gallary" 
+        className={({isActive})=>isActive?"active":""}>
+        Smiles
+        </NavLink>
+        </li>
+      <li>
+        <NavLink to={"/"}>
+        Memories
+        </NavLink>
+        </li> */}
       <li>Treasures</li>
       <li>Packs</li>
       <li>Tips</li>

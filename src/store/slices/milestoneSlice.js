@@ -109,14 +109,27 @@ const BASE_URL = "http://localhost:3001/milestones";
 
 // })
 
+const imageMap = {
+  hospitaDischarge,
+  oneMonth,
+  twoMonth,
+  threeMonths,
+  fourMonth,
+  fiveMonth,
+  sixMonths,
+  sevenMonths
+};
+
+
 export const fetchMilestones = createAsyncThunk(
   "milestones/fetchMilestones",
   async (_, { rejectWithValue }) => {
     try {
       console.log("🔵 Fetching milestones from:", BASE_URL);
       const res = await axios.get(BASE_URL);
+      const dataWithImg=res.data.map((m)=>({...m,img:imageMap[m.img]}))
       console.log("🟢 Response from server:", res.data);
-      return res.data;
+      return dataWithImg;
     } catch (err) {
       console.error("🔴 Error fetching milestones:", err);
       return rejectWithValue(err.response?.data || err.message);
